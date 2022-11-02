@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\UE_CPP.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{FBF59C3F-F49A-4C6D-ACD5-F9399B24A137}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UE_CPP.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\UE_CPPEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{C517596C-A031-4669-96B0-345B5CD6AEBA}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\UE_CPP">
+      <UniqueIdentifier>{5C6FFDA0-5E52-44E4-86F5-F029A0F855D5}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UE_CPP\UE_CPP.Build.cs">
+      <Filter>Source\UE_CPP</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\UE_CPP\UE_CPP.cpp">
+      <Filter>Source\UE_CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_CPP\UE_CPP.h">
+      <Filter>Source\UE_CPP</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UE_CPP\UE_CPPGameModeBase.cpp">
+      <Filter>Source\UE_CPP</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_CPP\UE_CPPGameModeBase.h">
+      <Filter>Source\UE_CPP</Filter>
+    </ClInclude>
+    <Filter Include="Source\UE_CPP\Item">
+      <UniqueIdentifier>{F330FD10-0699-4145-84B3-E06ED60E61EC}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UE_CPP\Item\C_Item.cpp">
+      <Filter>Source\UE_CPP\Item</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_CPP\Item\C_Item.h">
+      <Filter>Source\UE_CPP\Item</Filter>
+    </ClInclude>
+    <Filter Include="Source\UE_CPP\Notify">
+      <UniqueIdentifier>{FBD5A419-8CAB-46F6-B279-F964AB78D4E8}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UE_CPP\Notify\EndRollNotify.cpp">
+      <Filter>Source\UE_CPP\Notify</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_CPP\Notify\EndRollNotify.h">
+      <Filter>Source\UE_CPP\Notify</Filter>
+    </ClInclude>
+    <Filter Include="Source\UE_CPP\Player">
+      <UniqueIdentifier>{D5408D97-104E-4924-A8F4-641B292CC973}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UE_CPP\Player\C_Player.cpp">
+      <Filter>Source\UE_CPP\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_CPP\Player\C_Player.h">
+      <Filter>Source\UE_CPP\Player</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UE_CPP\Player\PlayerAnim.cpp">
+      <Filter>Source\UE_CPP\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_CPP\Player\PlayerAnim.h">
+      <Filter>Source\UE_CPP\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

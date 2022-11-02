@@ -12,6 +12,8 @@
 
 #include "Camera/CameraComponent.h"
 
+
+
 AC_Player::AC_Player()
 {
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>("SpringArm");
@@ -199,6 +201,19 @@ void AC_Player::PrintInventory()
 	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Red, *sInventory);
 
 }
+ // HP Atk ¹®
+float AC_Player::GetCurrentHealth()
+{
+	return 0.0f;
+}
 
+float AC_Player::GetMaxHealth()
+{
+	return 0.0f;
+}
 
+float AC_Player::GetAtk()
+{
+	return 0.0f;
+}
 

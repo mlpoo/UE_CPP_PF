@@ -25,6 +25,36 @@ private:
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
 
+	// HP, Atk 항목
+public:
+
+	UFUNCTION(BlueprintCallable, Category = "State")
+
+		float GetCurrentHealth();
+
+	UFUNCTION(BlueprintCallable, Category = "State")
+
+		float GetMaxHealth();
+
+	UFUNCTION(BlueprintCallable, Category = "State")
+
+		float GetAtk();
+
+
+private:
+
+	float fHealth;
+
+	float fCurrentHealth;
+
+	float Atk;
+
+	// https://joyeeeeeee.blogspot.com/2017/11/unreal46hpuiumg.html 참고
+
+
+
+
+
 public:
 	AC_Player();
 
@@ -67,6 +97,9 @@ public:
 	void Begin_Crouch();
 	UFUNCTION()
 	void End_Crouch();
+
+
+
 
 private:
 	TArray<AC_Item*> Inventory;
