@@ -100,8 +100,6 @@ void AC_Player::OnMoveForward(float axis)
 	FVector direction = FQuat(rotator).GetForwardVector().GetSafeNormal();
 	// Controller 기준의 앞 방향을 1로 정규화된 값으로 저장합니다.
 
-	
-
 	AddMovementInput(direction, axis);
 	// 캐릭터를 방향으로 이동시킵니다.
 }
@@ -112,8 +110,6 @@ void AC_Player::OnMoveRight(float axis)
 	FRotator rotator = FRotator(0, GetControlRotation().Yaw, 0);
 	FVector direction = FQuat(rotator).GetRightVector().GetSafeNormal();
 	// Controller 기준의 오른쪽 방향을 1로 정규화된 값으로 저장합니다.
-
-	
 
 	AddMovementInput(direction, axis);
 }
@@ -175,18 +171,33 @@ void AC_Player::End_Roll()
 }
 void AC_Player::Begin_Crouch()
 {
-	CanMove = true;
 	bCrouched = true;
 	GetCharacterMovement()->MaxWalkSpeed = 200;
-
-	
-
 }
 
 void AC_Player::End_Crouch()
 {
-	CanMove = true;
 	bCrouched = false;
+	GetCharacterMovement()->MaxWalkSpeed = 400;
+}
+
+void AC_Player::AddToInventory(AC_Item* items)
+{
+	Inventory.Add(items);
+}
+
+void AC_Player::PrintInventory()
+{
+	FString sInventory = "";
+
+	for(AC_Item* item : Inventory)
+	{
+		sInventory.Append(item->Name);
+		sInventory.Append(" | ");
+	}
+
+	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Red, *sInventory);
+
 }
 
 

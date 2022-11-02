@@ -22,9 +22,6 @@ void UPlayerAnim::NativeUpdateAnimation(float DelatSeconds)
     Speed = Owner->GetVelocity().Size2D();
     Direction = CalculateDirection(Owner->GetVelocity(), Owner->GetControlRotation());
 
-    Speed = Owner->GetVelocity().Size2D();
-    Direction = CalculateDirection(Owner->GetVelocity(), Owner->GetControlRotation());
-
     Pitch = Owner->GetBaseAimRotation().Pitch;
 
     bIsInAir = Owner->GetCharacterMovement()->IsFalling();

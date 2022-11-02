@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Item/C_Item.h"
 #include "C_Player.generated.h"
 
 UCLASS()
@@ -66,4 +67,13 @@ public:
 	void Begin_Crouch();
 	UFUNCTION()
 	void End_Crouch();
+
+private:
+	TArray<AC_Item*> Inventory;
+
+public:
+	void AddToInventory(AC_Item* items);
+
+	UFUNCTION(BlueprintCallable)
+		void PrintInventory();
 };
