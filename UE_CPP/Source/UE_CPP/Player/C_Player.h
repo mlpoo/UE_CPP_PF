@@ -78,6 +78,9 @@ private:
 	void Run();
 	void Walk();
 
+	void ItemSwapBefore(float axis);
+	void ItemSwapAfter(float axis);
+
 public:
 	bool bRolled;
 	bool CanMove;
@@ -99,8 +102,6 @@ public:
 	void End_Crouch();
 
 
-
-
 private:
 	TArray<AC_Item*> Inventory;
 
@@ -109,4 +110,6 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 		void PrintInventory();
+
+	
 };

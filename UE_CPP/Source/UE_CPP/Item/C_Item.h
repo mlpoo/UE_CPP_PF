@@ -47,4 +47,7 @@ public:
 
 	virtual void Show(bool visible);
 
+
+
+
 };

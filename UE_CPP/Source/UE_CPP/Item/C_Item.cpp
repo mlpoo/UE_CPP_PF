@@ -47,7 +47,7 @@ void AC_Item::Tick(float DeltaTime)
 
 void AC_Item::OnBeginOverlap(UPrimitiveComponent* OveriappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	UE_LOG(LogTemp, Warning, L"BeginOverlap");
+	// UE_LOG(LogTemp, Warning, L"BeginOverlap");
 	if (OtherActor != nullptr && OtherActor != this && OtherComp != nullptr)
 	{
 		OnInteract();
@@ -82,4 +82,5 @@ void AC_Item::Show(bool visible)
 	StaticMesh->SetCollisionEnabled(Collision);
 	Box->SetCollisionEnabled(Collision);
 }
+
 

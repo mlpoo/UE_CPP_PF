@@ -77,11 +77,17 @@ void AC_Player::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AC_Player::OnMoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AC_Player::OnMoveRight);
-	PlayerInputComponent->BindAxis("HorizontalLook", this, &AC_Player::OnHorizontalLook);
-	PlayerInputComponent->BindAxis("VerticalLook", this, &AC_Player::OnVerticalLook);
-	PlayerInputComponent->BindAxis("Zoom", this, &AC_Player::OnZoom);
-	PlayerInputComponent->BindAction("Roll", EInputEvent::IE_Released, this, &AC_Player::Begin_Roll);
 
+	PlayerInputComponent->BindAxis("HorizontalLook", this, &AC_Player::OnHorizontalLook);
+	PlayerInputComponent->BindAxis("VerticalLook",   this, &AC_Player::OnVerticalLook);
+
+	PlayerInputComponent->BindAxis("Zoom", this, &AC_Player::OnZoom);
+
+	PlayerInputComponent->BindAxis("ItemSwapBefore", this, &AC_Player::ItemSwapBefore);
+	PlayerInputComponent->BindAxis("ItemSwapAfter", this, &AC_Player::ItemSwapAfter);
+
+
+	PlayerInputComponent->BindAction("Roll", EInputEvent::IE_Released, this, &AC_Player::Begin_Roll);
 
 	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Pressed, this, &AC_Player::Run);
 	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Released, this, &AC_Player::Walk);
@@ -201,6 +207,7 @@ void AC_Player::PrintInventory()
 	GEngine->AddOnScreenDebugMessage(-1, 10, FColor::Red, *sInventory);
 
 }
+
  // HP Atk 문
 float AC_Player::GetCurrentHealth()
 {
@@ -217,3 +224,12 @@ float AC_Player::GetAtk()
 	return 0.0f;
 }
 
+void AC_Player::ItemSwapBefore(float axis)
+{
+	// 도환이가 장착 구현하면 그 아이템을 바꾸는 식으로 구현 (마크처럼)
+}
+
+void AC_Player::ItemSwapAfter(float axis)
+{
+	// 도환이가 장착 구현하면 그 아이템을 바꾸는 식으로 구현 (마크처럼)
+}
